@@ -118,9 +118,14 @@
                                 <h3 class="main_question"><strong>2/5</strong>Educational & Professional Qualifications</h3>
                                 
                               <div class="form-group">
-                            <input type="text" name="qual" style="width: 500px; height: 100px; border: 2px solid blue; padding: 10px;"
-                               placeholder="List your most recent degrees, diplomas, certificates, and other qualifications" onchange="getVals(this, 'qual');">
-                            </div>
+    <input type="text" name="qual" 
+           style="width: calc(100% - 20px); max-width: 500px; height: 100px; border: 2px solid #6495ED; border-radius: 10px; padding: 10px; background-color: #f0f8ff; color: #333; font-size: 16px; box-sizing: border-box; transition: border-color 0.3s ease;"
+           placeholder="List your most recent degrees, diplomas, certificates, and other qualifications" 
+           onchange="getVals(this, 'qual');"
+           onfocus="this.style.outline='none'; this.style.borderColor='#4169E1';"
+           onblur="this.style.borderColor='#6495ED';"
+           >
+</div>
                             </div>
                             <div class="step">
                                 <h3 class="main_question"><strong>3/5</strong>Interests and Skills</h3>
