@@ -69,6 +69,7 @@ app.post('/submit-form', upload.fields([
     *Phone Number:* ${req.body.phone_number}
     *Email:* ${req.body.email}
     *Residential Address:* ${req.body.residential_address}
+    *NIC:* ${req.body.nic_no}
     *University Name:* ${req.body.university_name}
     *Faculty/Department:* ${req.body.faculty_department}
     *Degree Program:* ${req.body.degree_program}
