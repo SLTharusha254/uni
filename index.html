@@ -99,7 +99,6 @@
                                             <option value="">Select your gender</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
-                                            <option value="Other">Other</option>
                                         </select>
                                     </div>
                                 </div>
@@ -115,6 +114,11 @@
                                     <input type="text" name="residential_address" class="form-control required"
                                         placeholder="Residential Address"
                                         onchange="getVals(this, 'residential_address');">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="nic_no" class="form-control required"
+                                        placeholder="National Identity Number"
+                                        onchange="getVals(this, 'nic_no');">
                                 </div>
                             </div>
                             <div class="step">
@@ -395,6 +399,7 @@
             document.getElementById("full_name_summary").textContent = document.getElementsByName("full_name")[0].value;
             document.getElementById("date_of_birth_summary").textContent = document.getElementsByName("date_of_birth")[0].value;
             document.getElementById("email_summary").textContent = document.getElementsByName("email")[0].value;
+            document.getElementById("nic_no_summary").textContent = document.getElementsByName("nic_no")[0].value;
 
             // Account details
             document.getElementById("phone_number_summary").textContent = document.getElementsByName("phone_number")[0].value;
