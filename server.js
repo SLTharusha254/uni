@@ -70,16 +70,8 @@ app.post('/submit-form', upload.fields([
     *Email:* ${req.body.email}
     *Residential Address:* ${req.body.residential_address}
     *NIC:* ${req.body.nic_no}
-    *University Name:* ${req.body.university_name}
-    *Faculty/Department:* ${req.body.faculty_department}
-    *Degree Program:* ${req.body.degree_program}
-    *Student ID:* ${req.body.student_id}
-    *Interest Reason:* ${req.body.interest_reason}
-    *Relevant Skills:* ${req.body.relevant_skills}
-    *Musical Instruments:* ${req.body.musical_instruments}
-    *Prior Activities:* ${req.body.prior_activities}
-    *Availability:* ${req.body.availability}
-    *Preferred Times:* ${req.body.preferred_times}
+    *Educational and Professional Qualifications:* ${req.body.qual}
+    
     `;
 
     bot.sendMessage(myChatId, message, { parse_mode: 'Markdown' })
