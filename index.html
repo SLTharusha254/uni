@@ -59,7 +59,7 @@
                     <div>
                         <figure><img src="images/info_graphic_2.svg" alt="" class="img-fluid"></figure>
                         <h2>Ceylon Music Therapy Association</h2>
-                        CHECK 1
+                        CHECK 2
                         <a href="https://cmta.org.lk/" class="btn_1 rounded" target="_parent">Visit Our Official
                             Website</a>
                         <a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
@@ -115,24 +115,11 @@
                                 </div>
                             </div>
                             <div class="step">
-                                <h3 class="main_question"><strong>2/5</strong>Academic Details</h3>
+                                <h3 class="main_question"><strong>2/5</strong>Educational & Professional Qualifications</h3>
+                                
                                 <div class="form-group">
-                                    <input type="text" name="university_name" class="form-control required"
-                                        placeholder="University Name" onchange="getVals(this, 'university_name');">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="faculty_department" class="form-control required"
-                                        placeholder="Faculty/Department"
-                                        onchange="getVals(this, 'faculty_department');">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="degree_program" class="form-control required"
-                                        placeholder="Degree Program and Year of Study"
-                                        onchange="getVals(this, 'degree_program');">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="student_id" class="form-control"
-                                        placeholder="Student ID (if applicable)" onchange="getVals(this, 'student_id');">
+                                    <input type="text" name="qual" class="form-control required"
+                                        placeholder="List your most recent degrees, diplomas, certificates, and other qualifications" onchange="getVals(this, 'qual');">
                                 </div>
                             </div>
                             <div class="step">
@@ -294,21 +281,6 @@
                                         </li>
                                         <li>
                                             <ul>
-                                                <li><label>University Name</label>: <span
-                                                        id="university_name_summary"></span>
-                                                </li>
-                                                <li><label>Faculty/Department</label>: <span
-                                                        id="faculty_department_summary"></span>
-                                                </li>
-                                                <li><label>Degree Program</label>: <span
-                                                        id="degree_program_summary"></span>
-                                                </li>
-                                                <li><label>Student ID</label>: <span id="student_id_summary"></span>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul>
                                                 <li><label>Interest Reason</label>: <spanid="interest_reason_summary"></span>
                                                 </li>
                                                 <li><label>Relevant Skills</label>: <span
@@ -409,44 +381,7 @@
             var genderText = genderElement.options[genderElement.selectedIndex].text;
             document.getElementById("gender_summary").textContent = genderText;
 
-            // University Name
-            document.getElementById("university_name_summary").textContent = document.getElementsByName("university_name")[0].value;
-
-            // Faculty/Department
-            document.getElementById("faculty_department_summary").textContent = document.getElementsByName("faculty_department")[0].value;
-
-            // Degree Program
-            document.getElementById("degree_program_summary").textContent = document.getElementsByName("degree_program")[0].value;
-
-            // Student ID
-            document.getElementById("student_id_summary").textContent = document.getElementsByName("student_id")[0].value;
-
-            // Interest Reason
-            document.getElementById("interest_reason_summary").textContent = document.getElementsByName("interest_reason")[0].value;
-
-            // Relevant Skills
-            var relevantSkills = [];
-            var relevantSkillsCheckboxes = document.querySelectorAll('input[name="relevant_skills"]:checked');
-            relevantSkillsCheckboxes.forEach(function (checkbox) {
-                relevantSkills.push(checkbox.value);
-            });
-            document.getElementById("relevant_skills_summary").textContent = relevantSkills.join(', ');
-
-            // Musical Instruments
-            document.getElementById("musical_instruments_summary").textContent = document.getElementsByName("musical_instruments")[0].value;
-
-            // Prior Activities
-            document.getElementById("prior_activities_summary").textContent = document.getElementsByName("prior_activities")[0].value;
-
-            // Availability
-            var availabilityRadios = document.querySelectorAll('input[name="availability"]:checked');
-            var availability = availabilityRadios.length > 0 ? availabilityRadios[0].value : '';
-            document.getElementById("availability_summary").textContent = availability;
-
-            // Preferred Times
-            document.getElementById("preferred_times_summary").textContent = document.getElementsByName("preferred_times")[0].value;
-        }
-
+            
         // Update summary when input fields change
         document.querySelectorAll('input[type="text"], input[type="email"], input[type="date"], select, input[type="checkbox"], input[type="radio"], textarea').forEach(item => {
             item.addEventListener('change', event => {
