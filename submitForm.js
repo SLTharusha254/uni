@@ -47,6 +47,7 @@ app.post('/api/submitForm', (req, res) => {
         residential_address,
         nic_no,
         qual,
+        work,
         // ... other fields ...
     } = req.body;
 
