@@ -61,20 +61,24 @@ app.post('/submit-form', upload.fields([
     console.log('Form submitted:', req.body);
 
     const message = `
-    *New form submission:*
+🎉 *New Form Submission* 🎉
 
-    *Full Name:* ${req.body.full_name}
-    *Date of Birth:* ${req.body.date_of_birth}
-    *Gender:* ${req.body.gender}
-    *Phone Number:* ${req.body.phone_number}
-    *Email:* ${req.body.email}
-    *Residential Address:* ${req.body.residential_address}
-    *NIC:* ${req.body.nic_no}
-    *Educational and Professional Qualifications:* ${req.body.qual}
-    *Work Experiance:* ${req.body.work}
-    *Relevant Skills & Abilities:* ${req.body.relevant_skills}
-    
-    `;
+📝 *Full Name:* ${req.body.full_name}  
+🎂 *Date of Birth:* ${req.body.date_of_birth}  
+🚻 *Gender:* ${req.body.gender}  
+📞 *Phone Number:* ${req.body.phone_number}  
+✉️ *Email:* ${req.body.email}  
+🏠 *Residential Address:* ${req.body.residential_address}  
+🆔 *NIC:* ${req.body.nic_no}  
+🎓 *Educational & Professional Qualifications:* ${req.body.qual}  
+💼 *Work Experience:* ${req.body.work}  
+💡 *Relevant Skills & Abilities:* ${req.body.relevant_skills}  
+💬 *Contribution:* ${req.body.contribution}  
+
+✨ *Thank you for your submission!* ✨  
+`;
+
+
 
     bot.sendMessage(myChatId, message, { parse_mode: 'Markdown' })
         .then(() => {
