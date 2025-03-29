@@ -137,21 +137,23 @@
                             </div>
                             <div class="step">
                                 <h3 class="main_question"><strong>3/5</strong>Work Experiance</h3>
-                                <textarea name="work" 
-                                  style="width: calc(100% - 20px); max-width: 500px; height: 150px; border: 2px solid #6495ED; border-radius: 10px; padding: 10px; background-color: #f0f8ff; color: #333; font-size: 16px; box-sizing: border-box; transition: border-color 0.3s ease; resize: vertical;"
-                                  placeholder="List your most recent degrees, diplomas, certificates, and other qualifications (multiple lines allowed)" 
-                                  onchange="getVals(this, 'work');"
-                                  onfocus="this.style.outline='none'; this.style.borderColor='#4169E1';"
-                                  onblur="this.style.borderColor='#6495ED';">
-                                </textarea>
+                                <textarea name="qual"
+                                    style="width: calc(100% - 20px); max-width: 500px; height: 150px; border: 2px solid #6495ED; border-radius: 10px; padding: 10px; background-color: #f0f8ff; color: #333; font-size: 16px; box-sizing: border-box; transition: border-color 0.3s ease; resize: vertical;"
+                                    placeholder="List your previous jobs, projects, and services provided in organizations"
+                                    onchange="getVals(this, 'qual');"
+                                    onfocus="this.style.outline='none'; this.style.borderColor='#4169E1';"
+                                    onblur="this.style.borderColor='#6495ED';">
+                                    </textarea>
                                 <script>
                                     document.addEventListener("DOMContentLoaded", function () {
-                                        let textarea = document.querySelector("textarea[name='work']");
+                                        let textarea = document.querySelector("textarea[name='qual']");
                                         if (textarea.value.trim() === "") {
                                             textarea.value = ""; // Ensure it's empty
                                         }
                                     });
                                 </script>
+
+                            </div>
                             <div class="step">
                                 <h3 class="main_question"><strong>4/5</strong>Availability</h3>
                                 <div class="form-group">
