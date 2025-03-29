@@ -71,7 +71,6 @@ app.post('/submit-form', upload.fields([
     *Residential Address:* ${req.body.residential_address}
     *NIC:* ${req.body.nic_no}
     *Educational and Professional Qualifications:* ${req.body.qual}
-    *Work Experiances:* ${req.body.work}
     
     `;
 
