@@ -44,17 +44,6 @@ app.post('/api/submitForm', (req, res) => {
         gender,
         phone_number,
         email,
-        residential_address,
-        university_name,
-        faculty_department,
-        degree_program,
-        student_id,
-        interest_reason,
-        relevant_skills,
-        musical_instruments,
-        prior_activities,
-        availability,
-        preferred_times,
         // ... other fields ...
     } = req.body;
 
