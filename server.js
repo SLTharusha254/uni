@@ -3,7 +3,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const path = require('path');
 const multer = require('multer');
 const fs = require('fs');
-const xlsx = require('xlsx'); // You'll need to install this: npm install xlsx
+const xlsx = require('xlsx'); // Install this: npm install xlsx
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -20,12 +20,14 @@ const upload = multer({ storage: storage });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Serve static files (CSS, JS, images, etc.)
 app.use('/favicon.ico', express.static(path.join(__dirname, 'favicon.ico')));
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/fonts', express.static(path.join(__dirname, 'fonts')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
 
+// Serve index.html on the root route
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -54,6 +56,7 @@ function saveSubmissionData(data) {
     });
 }
 
+// Endpoint to handle form submission
 app.post('/submit-form', upload.fields([
     { name: 'photo', maxCount: 1 },
     { name: 'resume', maxCount: 1 }
@@ -71,9 +74,9 @@ app.post('/submit-form', upload.fields([
     *Residential Address:* ${req.body.residential_address}
     *NIC:* ${req.body.nic_no}
     *Educational and Professional Qualifications:* ${req.body.qual}
-    
     `;
 
+    // Send message to Telegram bot
     bot.sendMessage(myChatId, message, { parse_mode: 'Markdown' })
         .then(() => {
             console.log('Form data sent to Telegram bot successfully');
@@ -102,12 +105,14 @@ app.post('/submit-form', upload.fields([
         });
 });
 
+// Telegram bot logic for receiving commands and exporting submissions
 bot.on('message', (msg) => {
     if (msg.chat.id === myChatId) {
         if (msg.text === '/all') {
             console.log("Received message:", msg.text); 
+
             // Read submission data from file
-            fs.readFile('submitForm.json', 'utf8', (err, data) => {
+            fs.readFile('submissions.json', 'utf8', (err, data) => {
                 if (err) {
                     console.error("Failed to read submissions data:", err);
                     bot.sendMessage(myChatId, "Error exporting submissions.");
@@ -133,6 +138,7 @@ bot.on('message', (msg) => {
     }
 });
 
+// Start the server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
