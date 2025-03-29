@@ -175,7 +175,22 @@
                                             
                             </div>
                             <div class="submit step">
-                                <h3 class="main_question"><strong>5/5</strong>Consent and Summary</h3>
+                                <h3 class="main_question"><strong>5/5</strong>Your Contribution & Submit</h3>
+                                 <textarea name="contribution"
+                                    style="width: calc(100% - 20px); max-width: 500px; height: 150px; border: 2px solid #6495ED; border-radius: 10px; padding: 10px; background-color: #f0f8ff; color: #333; font-size: 16px; box-sizing: border-box; transition: border-color 0.3s ease; resize: vertical;"
+                                    placeholder="Your ideas and Contributions for Association"
+                                    onchange="getVals(this, 'contribution');"
+                                    onfocus="this.style.outline='none'; this.style.borderColor='#4169E1';"
+                                    onblur="this.style.borderColor='#6495ED';">
+                                    </textarea>
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function () {
+                                        let textarea = document.querySelector("textarea[name='contribution']");
+                                        if (textarea.value.trim() === "") {
+                                            textarea.value = ""; // Ensure it's empty
+                                        }
+                                    });
+                                </script>
                                 <div class="form-group terms">
                                     <label class="container_check">I agree to abide by CMTA’s policies and
                                         guidelines.
@@ -199,34 +214,7 @@
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <div class="summary">
-                                    <ul>
-                                        <li>
-                                            <ul>
-                                                <li><label>Full Name</label>: <span
-                                                        id="full_name_summary"></span>
-                                                </li>
-                                                <li><label>Date of Birth</label>: <span
-                                                        id="date_of_birth_summary"></span>
-                                                </li>
-                                                <li><label>Gender</label>: <span id="gender_summary"></span>
-                                                </li>
-                                                <li><label>Phone Number</label>: <span
-                                                        id="phone_number_summary"></span>
-                                                </li>
-                                                <li><label>Email</label>: <span id="email_summary"></span>
-                                                </li>
-                                                <li><label>Residential Address</label>: <span
-                                                        id="residential_address_summary"></span>
-                                                </li>
-                                                <li><label>National Identity Number</label>: <span
-                                                        id="nic_no_summary"></span>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                       
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div>
                         <div id="bottom-wizard">
