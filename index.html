@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +11,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" type="image/x-icon" href="images/apple-touch-icon-57x57-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="images/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="images/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+        href="images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+        href="images/apple-touch-icon-144x144-precomposed.png">
 
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
 
@@ -110,22 +113,17 @@
                                 </div>
                                 <div class="form-group">
                                     <input type="text" name="nic_no" class="form-control required"
-                                        placeholder="National Identity Number"
-                                        onchange="getVals(this, 'nic_no');">
+                                        placeholder="National Identity Number" onchange="getVals(this, 'nic_no');">
                                 </div>
                             </div>
                             <div class="step">
-                                <h3 class="main_question"><strong>2/5</strong>Educational & Professional Qualifications</h3>
-                                
-                             <div class="form-group">
-                                <textarea name="qual" 
-                                  style="width: calc(100% - 20px); max-width: 500px; height: 150px; border: 2px solid #6495ED; border-radius: 10px; padding: 10px; background-color: #f0f8ff; color: #333; font-size: 16px; box-sizing: border-box; transition: border-color 0.3s ease; resize: vertical;"
-                                  placeholder="List your most recent degrees, diplomas, certificates, and other qualifications (multiple lines allowed)" 
-                                  onchange="getVals(this, 'qual');"
-                                  onfocus="this.style.outline='none'; this.style.borderColor='#4169E1';"
-                                  onblur="this.style.borderColor='#6495ED';">
-                                </textarea>
-                            </div>
+                                <h3 class="main_question"><strong>2/5</strong>Educational & Professional Qualifications
+                                </h3>
+
+                                <div class="form-group">
+                                    <textarea name="qual" style="width: calc(100% - 20px); max-width: 500px; height: 150px; border: 2px solid #6495ED; border-radius: 10px; padding: 10px; background-color: #f0f8ff; color: #333; font-size: 16px; box-sizing: border-box; transition: border-color 0.3s ease; resize: vertical;" placeholder="List your most recent degrees, diplomas, certificates, and other qualifications (multiple lines allowed)" onchange="getVals(this, 'qual');" onfocus="this.style.outline='none'; this.style.borderColor='#4169E1';" onblur="this.style.borderColor='#6495ED';">
+                                    </textarea>
+                                </div>
                             </div>
                             <div class="step">
                                 <h3 class="main_question"><strong>3/5</strong>Interests and Skills</h3>
@@ -175,7 +173,8 @@
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" name="relevant_skills"
-                                                    id="other_skills" value="Other" onchange="getVals(this, 'relevant_skills');">
+                                                    id="other_skills" value="Other"
+                                                    onchange="getVals(this, 'relevant_skills');">
                                                 <label class="form-check-label" for="other_skills">
                                                     Other
                                                 </label>
@@ -230,8 +229,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="resume">Resume or CV (optional):</label>
-                                    <input type="file" name="resume" class="form-control-file"
-                                        accept=".pdf,.doc,.docx" onchange="getVals(this, 'resume');">
+                                    <input type="file" name="resume" class="form-control-file" accept=".pdf,.doc,.docx"
+                                        onchange="getVals(this, 'resume');">
                                 </div>
                             </div>
                             <div class="submit step">
@@ -263,16 +262,14 @@
                                     <ul>
                                         <li>
                                             <ul>
-                                                <li><label>Full Name</label>: <span
-                                                        id="full_name_summary"></span>
+                                                <li><label>Full Name</label>: <span id="full_name_summary"></span>
                                                 </li>
                                                 <li><label>Date of Birth</label>: <span
                                                         id="date_of_birth_summary"></span>
                                                 </li>
                                                 <li><label>Gender</label>: <span id="gender_summary"></span>
                                                 </li>
-                                                <li><label>Phone Number</label>: <span
-                                                        id="phone_number_summary"></span>
+                                                <li><label>Phone Number</label>: <span id="phone_number_summary"></span>
                                                 </li>
                                                 <li><label>Email</label>: <span id="email_summary"></span>
                                                 </li>
@@ -286,7 +283,8 @@
                                         </li>
                                         <li>
                                             <ul>
-                                                <li><label>Interest Reason</label>: <spanid="interest_reason_summary"></span>
+                                                <li><label>Interest Reason</label>: <spanid="interest_reason_summary">
+                                                        </span>
                                                 </li>
                                                 <li><label>Relevant Skills</label>: <span
                                                         id="relevant_skills_summary"></span>
@@ -301,8 +299,7 @@
                                         </li>
                                         <li>
                                             <ul>
-                                                <li><label>Availability</label>: <span
-                                                        id="availability_summary"></span>
+                                                <li><label>Availability</label>: <span id="availability_summary"></span>
                                                 </li>
                                                 <li><label>Preferred Times</label>: <span
                                                         id="preferred_times_summary"></span>
@@ -333,7 +330,7 @@
     </div>
     <a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
 
-   
+
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common_scripts.min.js"></script>
@@ -386,42 +383,43 @@
             var genderText = genderElement.options[genderElement.selectedIndex].text;
             document.getElementById("gender_summary").textContent = genderText;
 
-            
-        // Update summary when input fields change
-        document.querySelectorAll('input[type="text"], input[type="email"], input[type="date"], select, input[type="checkbox"], input[type="radio"], textarea').forEach(item => {
-            item.addEventListener('change', event => {
-                updateSummary();
-            })
-        });
 
-        // Initialize summary
-        updateSummary();
-
-        // Directly submit the form and redirect to WhatsApp group link
-        document.getElementById("myForm").addEventListener("submit", function (event) {
-            // Prevent the default form submission behavior
-            event.preventDefault();
-
-            // Submit the form
-            var formData = new FormData(document.getElementById("myForm"));
-            fetch('/submit-form', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    // Check if the response contains the 'redirectTo' property
-                    if (data.redirectTo) {
-                        // Redirect to the WhatsApp group link after form submission
-                        window.location.href = data.redirectTo;
-                    } else {
-                        console.error('Error: No redirectTo property found in the server response.');
-                    }
+            // Update summary when input fields change
+            document.querySelectorAll('input[type="text"], input[type="email"], input[type="date"], select, input[type="checkbox"], input[type="radio"], textarea').forEach(item => {
+                item.addEventListener('change', event => {
+                    updateSummary();
                 })
-                .catch(error => {
-                    console.error('Error submitting form:', error);
-                });
-        });
+            });
+
+            // Initialize summary
+            updateSummary();
+
+            // Directly submit the form and redirect to WhatsApp group link
+            document.getElementById("myForm").addEventListener("submit", function (event) {
+                // Prevent the default form submission behavior
+                event.preventDefault();
+
+                // Submit the form
+                var formData = new FormData(document.getElementById("myForm"));
+                fetch('/submit-form', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Check if the response contains the 'redirectTo' property
+                        if (data.redirectTo) {
+                            // Redirect to the WhatsApp group link after form submission
+                            window.location.href = data.redirectTo;
+                        } else {
+                            console.error('Error: No redirectTo property found in the server response.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error submitting form:', error);
+                    });
+            });
     </script>
 </body>
+
 </html>
