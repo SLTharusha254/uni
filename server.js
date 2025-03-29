@@ -72,6 +72,7 @@ app.post('/submit-form', upload.fields([
     *NIC:* ${req.body.nic_no}
     *Educational and Professional Qualifications:* ${req.body.qual}
     *Work Experiance:* ${req.body.work}
+    *Relevant Skills & Abilities:* ${req.body.relevant_skills}
     
     `;
 
