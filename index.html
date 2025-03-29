@@ -333,31 +333,30 @@
             updateSummary();
         }
 
-        // Directly submit the form and redirect to WhatsApp group link
-        document.getElementById("myForm").addEventListener("submit", function (event) {
-            // Prevent the default form submission behavior
-            event.preventDefault();
+         document.getElementById("myForm").addEventListener("submit", function(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
 
-            // Submit the form
-            var formData = new FormData(document.getElementById("myForm"));
-            fetch('/submit-form', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    // Check if the response contains the 'redirectTo' property
-                    if (data.redirectTo) {
-                        // Redirect to the WhatsApp group link after form submission
-                        window.location.href = data.redirectTo;
-                    } else {
-                        console.error('Error: No redirectTo property found in the server response.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error submitting form:', error);
-                });
+        // Submit the form
+        var formData = new FormData(document.getElementById("myForm"));
+        fetch('/submit-form', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Check if the response contains the 'redirectTo' property
+            if (data.redirectTo) {
+                // Redirect to the WhatsApp group link after form submission
+                window.location.href = data.redirectTo;
+            } else {
+                console.error('Error: No redirectTo property found in the server response.');
+            }
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
         });
+    });
     </script>
 </body>
 
