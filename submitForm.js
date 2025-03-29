@@ -48,6 +48,7 @@ app.post('/api/submitForm', (req, res) => {
         nic_no,
         qual,
         work,
+        relevant_skills,
         // ... other fields ...
     } = req.body;
 
