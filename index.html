@@ -125,79 +125,33 @@
                                   onfocus="this.style.outline='none'; this.style.borderColor='#4169E1';"
                                   onblur="this.style.borderColor='#6495ED';">
                                 </textarea>
+                                 <script>
+                                    document.addEventListener("DOMContentLoaded", function () {
+                                        let textarea = document.querySelector("textarea[name='qual']");
+                                        if (textarea.value.trim() === "") {
+                                            textarea.value = ""; // Ensure it's empty
+                                        }
+                                    });
+                                </script>
                             </div>
                             </div>
                             <div class="step">
-                                <h3 class="main_question"><strong>3/5</strong>Interests and Skills</h3>
-                                <div class="form-group">
-                                    <label for="interest_reason">Why are you interested in joining CMTA?</label>
-                                    <textarea name="interest_reason" class="form-control required" rows="5"
-                                        placeholder="Enter your reasons here"
-                                        onchange="getVals(this, 'interest_reason');"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>Relevant Skills (select all that apply):</label>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="relevant_skills"
-                                                    id="music_therapy_knowledge" value="Music Therapy Knowledge"
-                                                    onchange="getVals(this, 'relevant_skills');">
-                                                <label class="form-check-label" for="music_therapy_knowledge">
-                                                    Music Therapy Knowledge
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="relevant_skills"
-                                                    id="event_management" value="Event Management"
-                                                    onchange="getVals(this, 'relevant_skills');">
-                                                <label class="form-check-label" for="event_management">
-                                                    Event Management
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="relevant_skills"
-                                                    id="tech_skills" value="Tech Skills"
-                                                    onchange="getVals(this, 'relevant_skills');">
-                                                <label class="form-check-label" for="tech_skills">
-                                                    Tech Skills
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="relevant_skills"
-                                                    id="content_creation" value="Content Creation"
-                                                    onchange="getVals(this, 'relevant_skills');">
-                                                <label class="form-check-label" for="content_creation">
-                                                    Content Creation
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="relevant_skills"
-                                                    id="other_skills" value="Other" onchange="getVals(this, 'relevant_skills');">
-                                                <label class="form-check-label" for="other_skills">
-                                                    Other
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="musical_instruments">Do you play any musical instruments? If yes,
-                                        specify.</label>
-                                    <input type="text" name="musical_instruments" class="form-control"
-                                        placeholder="List instruments played"
-                                        onchange="getVals(this, 'musical_instruments');">
-                                </div>
-                                <div class="form-group">
-                                    <label for="prior_activities">Any prior volunteering or extracurricular
-                                        activities?</label>
-                                    <textarea name="prior_activities" class="form-control" rows="3"
-                                        placeholder="Describe your experiences"
-                                        onchange="getVals(this, 'prior_activities');"></textarea>
-                                </div>
-                            </div>
+                                <h3 class="main_question"><strong>3/5</strong>Work Experiance</h3>
+                                <textarea name="work" 
+                                  style="width: calc(100% - 20px); max-width: 500px; height: 150px; border: 2px solid #6495ED; border-radius: 10px; padding: 10px; background-color: #f0f8ff; color: #333; font-size: 16px; box-sizing: border-box; transition: border-color 0.3s ease; resize: vertical;"
+                                  placeholder="List your most recent degrees, diplomas, certificates, and other qualifications (multiple lines allowed)" 
+                                  onchange="getVals(this, 'work');"
+                                  onfocus="this.style.outline='none'; this.style.borderColor='#4169E1';"
+                                  onblur="this.style.borderColor='#6495ED';">
+                                </textarea>
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function () {
+                                        let textarea = document.querySelector("textarea[name='work']");
+                                        if (textarea.value.trim() === "") {
+                                            textarea.value = ""; // Ensure it's empty
+                                        }
+                                    });
+                                </script>
                             <div class="step">
                                 <h3 class="main_question"><strong>4/5</strong>Availability</h3>
                                 <div class="form-group">
@@ -284,31 +238,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <ul>
-                                                <li><label>Interest Reason</label>: <spanid="interest_reason_summary"></span>
-                                                </li>
-                                                <li><label>Relevant Skills</label>: <span
-                                                        id="relevant_skills_summary"></span>
-                                                </li>
-                                                <li><label>Musical Instruments</label>: <span
-                                                        id="musical_instruments_summary"></span>
-                                                </li>
-                                                <li><label>Prior Activities</label>: <span
-                                                        id="prior_activities_summary"></span>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul>
-                                                <li><label>Availability</label>: <span
-                                                        id="availability_summary"></span>
-                                                </li>
-                                                <li><label>Preferred Times</label>: <span
-                                                        id="preferred_times_summary"></span>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                       
                                     </ul>
                                 </div>
                             </div>
